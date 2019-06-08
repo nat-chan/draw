@@ -65,8 +65,8 @@ var Board = (function() {
    };
 
     var fitToWindow = function fitToWindow() {
-      var marginX = 10;
-      var marginY = 10;
+      var marginX = 0;
+      var marginY = 0;
 
       var heightCss = window.innerHeight - marginY;
       var heightCanvas = heightCss * this.resolution;
