@@ -15,6 +15,7 @@ var Pen = (function() {
       erase: 'draw erase',
       menu: 'menu'
     },
+    scale:1,
     init: function init(context) {
       context.lineJoin = this.lineJoin;
       context.lineWidth = this.lineWidth;
@@ -63,7 +64,7 @@ var Pen = (function() {
           return (e.width + e.height - 40) / 2;
         }
       }
-      case 'pen': return e.pressure * 8;
+      case 'pen': return Pen.scale * e.pressure * 8;
       default: return (e.pressure) ? e.pressure * 8 : 4;
     }
   }
